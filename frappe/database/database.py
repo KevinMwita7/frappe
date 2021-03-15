@@ -656,7 +656,7 @@ class Database(object):
 			# for singles
 			keys = list(to_update)
 			self.sql('''
-				update `tabSingles` set (doctype, field, value) values('System Settings', 'System Settings', 'scheduler_last_event')
+				update `tabSingles` set doctype='System Settings', field='System Settings', value='scheduler_last_event'
 				where field in ({0}) and
 					doctype=%s'''.format(', '.join(['%s']*len(keys))),
 					list(keys) + [dt], debug=debug)
