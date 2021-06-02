@@ -938,8 +938,7 @@ frappe.views.QueryReport = class QueryReport extends frappe.views.BaseList {
 		this.make_access_log('Print', 'PDF');
 		frappe.render_grid({
 			template: print_settings.columns ? 'print_grid' : custom_format,
-			// title: __(this.report_name),
-			title: "Testing",
+			title: __(this.report_name),
 			subtitle: filters_html,
 			print_settings: print_settings,
 			landscape: landscape,
